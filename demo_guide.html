@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>デモ進行ガイド | Salesforce デモ</title>
+<link rel="stylesheet" href="_styles.css">
+<style>
+.step-block {
+  background: #fff;
+  border: 1px solid #dddbda;
+  border-left: 4px solid #0070d2;
+  border-radius: 4px;
+  padding: 16px 20px;
+  margin-bottom: 16px;
+}
+.step-block.confirm { border-left-color: #e65c00; }
+.step-header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 10px;
+}
+.step-num {
+  background: #0070d2;
+  color: #fff;
+  border-radius: 4px;
+  padding: 2px 8px;
+  font-size: 12px;
+  font-weight: 700;
+  white-space: nowrap;
+}
+.step-num.confirm { background: #e65c00; }
+.step-time {
+  color: #54698d;
+  font-size: 12px;
+  white-space: nowrap;
+}
+.step-title { font-size: 15px; font-weight: 600; }
+.step-body { font-size: 13px; line-height: 1.8; color: #16325c; }
+.step-body li { margin-left: 16px; }
+.talking-point {
+  background: #f0f7ff;
+  border-left: 3px solid #0070d2;
+  padding: 8px 12px;
+  border-radius: 0 4px 4px 0;
+  font-size: 13px;
+  margin-top: 8px;
+  font-style: italic;
+  color: #0c4a8a;
+}
+</style>
+</head>
+<body>
+
+<nav class="topnav" id="topnav"></nav>
+
+<div class="page-wrap">
+  <div class="page-header">
+    <h1>デモ進行ガイド</h1>
+    <p>所要時間：約8分 ｜ 2026-04-30（木）18:00 MTG用</p>
+  </div>
+
+  <div class="card" style="background:#e8f4fd;border-color:#b8daff;">
+    <div style="font-size:13px;line-height:1.8;">
+      <strong>このデモの目的：</strong>画面を見ながら「入力項目・ステージ・運用ルール」をすり合わせ、要件を確定する<br>
+      <strong>前提：</strong>画面の完成度より「業務フローが話せること」を優先。推測部分は確認事項として分離済み
+    </div>
+  </div>
+
+  <!-- STEP 1 -->
+  <div class="step-block">
+    <div class="step-header">
+      <span class="step-num">STEP 1</span>
+      <span class="step-time">〜1分</span>
+      <span class="step-title">ゴールと画面構成の説明</span>
+    </div>
+    <div class="step-body">
+      <ul>
+        <li>「今日のゴールは画面を見ながら入力項目・ステージ・運用ルールを決めることです」</li>
+        <li>画面は5つ：ホーム → リード一覧/詳細 → 商談一覧/詳細</li>
+        <li>「議事録にない部分は後半の確認事項でご確認します」</li>
+      </ul>
+    </div>
+    <div class="talking-point">「今日は完成品のデモではなく、一緒に要件を決めるための素材としてご覧ください」</div>
+  </div>
+
+  <!-- STEP 2 -->
+  <div class="step-block">
+    <div class="step-header">
+      <span class="step-num">STEP 2</span>
+      <span class="step-time">〜2分</span>
+      <span class="step-title">ホーム（S-00）：受注見込みの全体把握</span>
+    </div>
+    <div class="step-body">
+      <ul>
+        <li><a href="index.html" target="_blank">index.html</a> を表示</li>
+        <li>KPI4枚（受注見込み・アクティブリード・進行中商談・今月受注済み）の説明</li>
+        <li><strong>滞留アラート</strong>を指して：「14日以上アクションなし案件を自動で通知します。タイムラインの見落とし防止が目的です」</li>
+        <li>「紹介経由はリードタイムが短く、他経路は後ろ倒しになりがち、という議事録の課題をここで見える化しています」</li>
+      </ul>
+    </div>
+    <div class="talking-point">「滞留の閾値（14日）はご要望に合わせて変更できます。今の運用感覚に近い日数はどれくらいですか？」</div>
+  </div>
+
+  <!-- STEP 3 -->
+  <div class="step-block">
+    <div class="step-header">
+      <span class="step-num">STEP 3</span>
+      <span class="step-time">〜2分</span>
+      <span class="step-title">リード一覧 → リード詳細（S-01）</span>
+    </div>
+    <div class="step-body">
+      <ul>
+        <li><a href="lead_list.html" target="_blank">lead_list.html</a> を表示し、一覧の列（経路・確度・次アクション日）を説明</li>
+        <li>「グローバルシステムズ」をクリックして詳細へ遷移</li>
+        <li>ステージバー（初回接触〜商談転換）を説明</li>
+        <li>活動タイムラインを指して：「Slack・Chatworkのメモをここに集約する運用イメージです」</li>
+        <li>関連情報の所在欄を指して：「現状の散在を可視化しています。どこに集約するかを確認事項で確認します」</li>
+      </ul>
+    </div>
+    <div class="talking-point">「リード詳細の項目で、今の管理シートにあって外せない項目はありますか？」</div>
+  </div>
+
+  <!-- STEP 4 -->
+  <div class="step-block">
+    <div class="step-header">
+      <span class="step-num">STEP 4</span>
+      <span class="step-time">〜2分</span>
+      <span class="step-title">商談一覧 → 商談詳細（S-02）：2経路のステージパス</span>
+    </div>
+    <div class="step-body">
+      <ul>
+        <li><a href="opportunity_list.html" target="_blank">opportunity_list.html</a> を表示し、上申状況・滞留アラートを説明</li>
+        <li>「有限会社メディアクリエイト」をクリックして詳細へ遷移</li>
+        <li><strong>ステージパスの2経路表示</strong>を説明：「アウトバウンドは上申・社内調整が入ります。紹介経由は短いプロセスです」</li>
+        <li>見積構成枠を指して：「単価の積み上げ方を画面で議論できるよう枠を用意しました（確認事項Q4）」</li>
+      </ul>
+    </div>
+    <div class="talking-point">「ステージの名称や順番はいかがですか？実際の商談の流れと合っていますか？」</div>
+  </div>
+
+  <!-- STEP 5 -->
+  <div class="step-block confirm">
+    <div class="step-header">
+      <span class="step-num confirm">STEP 5</span>
+      <span class="step-time">〜2分</span>
+      <span class="step-title">確認事項（5問）の回答</span>
+    </div>
+    <div class="step-body">
+      <ul>
+        <li><a href="checklist.html" target="_blank">checklist.html</a> を表示</li>
+        <li>Q1：ステージ名称・定義の確認</li>
+        <li>Q2：必須入力項目の確認</li>
+        <li>Q3：ツール並用ルールの確認（Slack/Chatwork/Notion/スプレッドシート）</li>
+        <li>Q4：見積・提案をSalesforceで管理するか</li>
+        <li>Q5：入力タイミング・担当者ルール</li>
+      </ul>
+    </div>
+    <div class="talking-point">「回答いただいた内容をもとに、次フェーズの要件定義書を作成します」</div>
+  </div>
+
+  <!-- まとめ -->
+  <div class="card" style="background:#f9fef9;border-color:#c3e6cb;">
+    <div class="card-title" style="color:#155724;">MTG終了時のゴール</div>
+    <div style="font-size:13px;line-height:2;">
+      <div>✅ ステージ名称・数が決まった</div>
+      <div>✅ 必須入力項目が決まった</div>
+      <div>✅ ツール集約ルールの方針が決まった</div>
+      <div>✅ 見積管理の扱いが決まった</div>
+      <div>✅ 入力運用ルールの方向性が決まった</div>
+    </div>
+  </div>
+
+</div>
+
+<script src="_nav.js"></script>
+</body>
+</html>

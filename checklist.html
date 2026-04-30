@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>確認事項リスト | Salesforce デモ</title>
+<link rel="stylesheet" href="_styles.css">
+</head>
+<body>
+
+<nav class="topnav" id="topnav"></nav>
+
+<div class="page-wrap">
+  <div class="page-header">
+    <h1>確認事項リスト</h1>
+    <p>議事録から読み取れなかった点。MTGでYes/No or 選択肢で確認できる形にまとめています。</p>
+  </div>
+
+  <!-- Q1 -->
+  <div class="card">
+    <div style="display:flex;gap:12px;align-items:flex-start;">
+      <div style="background:#0070d2;color:#fff;border-radius:50%;width:28px;height:28px;display:flex;align-items:center;justify-content:center;font-weight:700;font-size:13px;flex-shrink:0;">1</div>
+      <div style="flex:1;">
+        <div style="font-size:15px;font-weight:600;margin-bottom:8px;">
+          商談ステージの名称・定義を確認させてください
+        </div>
+        <div style="font-size:13px;color:#54698d;margin-bottom:12px;">
+          デモでは紹介経由とアウトバウンドでステージを分けて表示しています。実際の運用に近いステージ名はどれですか？
+        </div>
+        <div style="display:flex;flex-wrap:wrap;gap:8px;">
+          <label style="display:flex;align-items:center;gap:6px;padding:6px 12px;border:1px solid #dddbda;border-radius:4px;cursor:pointer;font-size:13px;"><input type="radio" name="q1"> デモの通りでほぼOK（調整は細部のみ）</label>
+          <label style="display:flex;align-items:center;gap:6px;padding:6px 12px;border:1px solid #dddbda;border-radius:4px;cursor:pointer;font-size:13px;"><input type="radio" name="q1"> ステージ名・順番を変えたい</label>
+          <label style="display:flex;align-items:center;gap=6px;padding:6px 12px;border:1px solid #dddbda;border-radius:4px;cursor:pointer;font-size:13px;"><input type="radio" name="q1"> 経路別に分けず、統一ステージにしたい</label>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Q2 -->
+  <div class="card">
+    <div style="display:flex;gap:12px;align-items:flex-start;">
+      <div style="background:#0070d2;color:#fff;border-radius:50%;width:28px;height:28px;display:flex;align-items:center;justify-content:center;font-weight:700;font-size:13px;flex-shrink:0;">2</div>
+      <div style="flex:1;">
+        <div style="font-size:15px;font-weight:600;margin-bottom:8px;">
+          リード・商談に必ず入力したい項目を教えてください
+        </div>
+        <div style="font-size:13px;color:#54698d;margin-bottom:12px;">
+          デモでは「開始時期・確度・次アクション日・上申状況」を主要項目としています。これ以外で必須にしたいものはありますか？
+        </div>
+        <div style="display:flex;flex-wrap:wrap;gap:8px;">
+          <label style="display:flex;align-items:center;gap:6px;padding:6px 12px;border:1px solid #dddbda;border-radius:4px;cursor:pointer;font-size:13px;"><input type="checkbox"> 予算感</label>
+          <label style="display:flex;align-items:center;gap:6px;padding:6px 12px;border:1px solid #dddbda;border-radius:4px;cursor:pointer;font-size:13px;"><input type="checkbox"> 競合状況</label>
+          <label style="display:flex;align-items:center;gap:6px;padding:6px 12px;border:1px solid #dddbda;border-radius:4px;cursor:pointer;font-size:13px;"><input type="checkbox"> 意思決定者の役職</label>
+          <label style="display:flex;align-items:center;gap:6px;padding:6px 12px;border:1px solid #dddbda;border-radius:4px;cursor:pointer;font-size:13px;"><input type="checkbox"> 失注理由</label>
+          <label style="display:flex;align-items:center;gap:6px;padding:6px 12px;border:1px solid #dddbda;border-radius:4px;cursor:pointer;font-size:13px;"><input type="checkbox"> その他（MTGでご記入）→</label>
+          <input type="text" placeholder="自由記入" style="padding:6px 12px;border:1px solid #dddbda;border-radius:4px;font-size:13px;width:200px;">
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Q3 -->
+  <div class="card">
+    <div style="display:flex;gap:12px;align-items:flex-start;">
+      <div style="background:#0070d2;color:#fff;border-radius:50%;width:28px;height:28px;display:flex;align-items:center;justify-content:center;font-weight:700;font-size:13px;flex-shrink:0;">3</div>
+      <div style="flex:1;">
+        <div style="font-size:15px;font-weight:600;margin-bottom:8px;">
+          現在の管理ツールとSalesforceの役割分担を確認させてください
+        </div>
+        <div style="font-size:13px;color:#54698d;margin-bottom:12px;">
+          Slack / Chatwork / Notion / スプレッドシートを現在お使いとのことでした。Salesforce導入後もどれを並用しますか？
+        </div>
+        <table style="font-size:13px;">
+          <thead>
+            <tr>
+              <th>ツール</th>
+              <th>Salesforceに集約（移行）</th>
+              <th>並用する（連携）</th>
+              <th>そのまま別管理</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Slack</td>
+              <td style="text-align:center;"><input type="radio" name="q3_slack"></td>
+              <td style="text-align:center;"><input type="radio" name="q3_slack"></td>
+              <td style="text-align:center;"><input type="radio" name="q3_slack"></td>
+            </tr>
+            <tr>
+              <td>Chatwork</td>
+              <td style="text-align:center;"><input type="radio" name="q3_chat"></td>
+              <td style="text-align:center;"><input type="radio" name="q3_chat"></td>
+              <td style="text-align:center;"><input type="radio" name="q3_chat"></td>
+            </tr>
+            <tr>
+              <td>Notion</td>
+              <td style="text-align:center;"><input type="radio" name="q3_notion"></td>
+              <td style="text-align:center;"><input type="radio" name="q3_notion"></td>
+              <td style="text-align:center;"><input type="radio" name="q3_notion"></td>
+            </tr>
+            <tr>
+              <td>スプレッドシート</td>
+              <td style="text-align:center;"><input type="radio" name="q3_sheet"></td>
+              <td style="text-align:center;"><input type="radio" name="q3_sheet"></td>
+              <td style="text-align:center;"><input type="radio" name="q3_sheet"></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+
+  <!-- Q4 -->
+  <div class="card">
+    <div style="display:flex;gap:12px;align-items:flex-start;">
+      <div style="background:#0070d2;color:#fff;border-radius:50%;width:28px;height:28px;display:flex;align-items:center;justify-content:center;font-weight:700;font-size:13px;flex-shrink:0;">4</div>
+      <div style="flex:1;">
+        <div style="font-size:15px;font-weight:600;margin-bottom:8px;">
+          見積・提案はSalesforceで管理しますか？
+        </div>
+        <div style="font-size:13px;color:#54698d;margin-bottom:12px;">
+          議事録で「単価をどう上げるか」「見積・提案の考え方」が論点に出ていました。デモでは商談詳細に見積構成枠を用意しています。
+        </div>
+        <div style="display:flex;flex-wrap:wrap;gap:8px;">
+          <label style="display:flex;align-items:center;gap:6px;padding:6px 12px;border:1px solid #dddbda;border-radius:4px;cursor:pointer;font-size:13px;"><input type="radio" name="q4"> Salesforceで管理したい（Phase 0で含める）</label>
+          <label style="display:flex;align-items:center;gap:6px;padding:6px 12px;border:1px solid #dddbda;border-radius:4px;cursor:pointer;font-size:13px;"><input type="radio" name="q4"> 今回は不要（後工程でよい）</label>
+          <label style="display:flex;align-items:center;gap:6px;padding:6px 12px;border:1px solid #dddbda;border-radius:4px;cursor:pointer;font-size:13px;"><input type="radio" name="q4"> 別ツール（Notion等）で管理する</label>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Q5 -->
+  <div class="card">
+    <div style="display:flex;gap:12px;align-items:flex-start;">
+      <div style="background:#0070d2;color:#fff;border-radius:50%;width:28px;height:28px;display:flex;align-items:center;justify-content:center;font-weight:700;font-size:13px;flex-shrink:0;">5</div>
+      <div style="flex:1;">
+        <div style="font-size:15px;font-weight:600;margin-bottom:8px;">
+          Salesforceへの入力タイミング・担当者のルールを確認させてください
+        </div>
+        <div style="font-size:13px;color:#54698d;margin-bottom:12px;">
+          運用を定着させるために「誰が・いつ・何を入力するか」のルールが必要です。現状に近いものはどれですか？
+        </div>
+        <div style="display:flex;flex-wrap:wrap;gap:8px;">
+          <label style="display:flex;align-items:center;gap:6px;padding:6px 12px;border:1px solid #dddbda;border-radius:4px;cursor:pointer;font-size:13px;"><input type="radio" name="q5"> 担当営業が面談後すぐに入力</label>
+          <label style="display:flex;align-items:center;gap:6px;padding:6px 12px;border:1px solid #dddbda;border-radius:4px;cursor:pointer;font-size:13px;"><input type="radio" name="q5"> 週次でまとめて入力</label>
+          <label style="display:flex;align-items:center;gap:6px;padding:6px 12px;border:1px solid #dddbda;border-radius:4px;cursor:pointer;font-size:13px;"><input type="radio" name="q5"> 管理者（マネージャー）が代理入力</label>
+          <label style="display:flex;align-items:center;gap:6px;padding:6px 12px;border:1px solid #dddbda;border-radius:4px;cursor:pointer;font-size:13px;"><input type="radio" name="q5"> まだ決まっていない</label>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+<script src="_nav.js"></script>
+</body>
+</html>

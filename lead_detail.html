@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>S-01b リード詳細 | Salesforce デモ</title>
+<link rel="stylesheet" href="_styles.css">
+</head>
+<body>
+
+<nav class="topnav" id="topnav"></nav>
+
+<div class="page-wrap">
+  <div style="margin-bottom:12px;">
+    <a href="lead_list.html" style="color:#0070d2;font-size:13px;text-decoration:none;">← リード一覧に戻る</a>
+  </div>
+
+  <div class="page-header" style="display:flex;align-items:flex-start;justify-content:space-between;">
+    <div>
+      <h1>グローバルシステムズ</h1>
+      <p>
+        <span class="badge badge-referral">紹介</span>&nbsp;
+        リード詳細 | 担当：田中 部長
+      </p>
+    </div>
+    <div class="btn-row" style="margin:0;">
+      <a href="opportunity_detail.html" class="btn btn-primary">商談に転換</a>
+      <a href="#" class="btn btn-secondary">編集</a>
+    </div>
+  </div>
+
+  <!-- ステータスバー -->
+  <div class="stage-path" style="margin-bottom:20px;">
+    <div class="stage-step done">初回接触</div>
+    <div class="stage-step done">個別面談</div>
+    <div class="stage-step active">詳細商談</div>
+    <div class="stage-step">見積提示</div>
+    <div class="stage-step">商談転換</div>
+  </div>
+
+  <div class="detail-grid">
+    <!-- メイン情報 -->
+    <div>
+      <div class="card">
+        <div class="card-title">基本情報</div>
+        <div class="field-row">
+          <div class="field-item">
+            <div class="field-label">会社名</div>
+            <div class="field-value">グローバルシステムズ</div>
+          </div>
+          <div class="field-item">
+            <div class="field-label">担当者名</div>
+            <div class="field-value">田中 一郎</div>
+          </div>
+          <div class="field-item">
+            <div class="field-label">役職</div>
+            <div class="field-value">営業部 部長</div>
+          </div>
+          <div class="field-item">
+            <div class="field-label">電話番号</div>
+            <div class="field-value">03-XXXX-XXXX</div>
+          </div>
+          <div class="field-item">
+            <div class="field-label">メールアドレス</div>
+            <div class="field-value">tanaka@global-sys.example</div>
+          </div>
+          <div class="field-item">
+            <div class="field-label">獲得経路</div>
+            <div class="field-value"><span class="badge badge-referral">紹介</span></div>
+          </div>
+          <div class="field-item">
+            <div class="field-label">紹介元</div>
+            <div class="field-value">細貝様経由</div>
+          </div>
+          <div class="field-item">
+            <div class="field-label">初回接触日</div>
+            <div class="field-value">2026-04-10</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-title">進捗・アクション</div>
+        <div class="field-row">
+          <div class="field-item">
+            <div class="field-label">ステータス</div>
+            <div class="field-value">詳細商談待ち</div>
+          </div>
+          <div class="field-item">
+            <div class="field-label">確度</div>
+            <div class="field-value"><span class="badge badge-high">高</span></div>
+          </div>
+          <div class="field-item">
+            <div class="field-label">開始時期（見込み）</div>
+            <div class="field-value">2026年5月〜</div>
+          </div>
+          <div class="field-item">
+            <div class="field-label">次アクション日</div>
+            <div class="field-value">2026-04-30</div>
+          </div>
+          <div class="field-item" style="grid-column:1/-1;">
+            <div class="field-label">次アクション内容</div>
+            <div class="field-value">詳細商談（営業部同席）にてサービス内容説明・ヒアリング</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-title">ヒアリングメモ</div>
+        <div style="font-size:13px;line-height:1.7;color:#16325c;">
+          <p>・現状の課題：営業管理がスプレッドシートとチャットに分散しており、進捗把握に時間がかかっている</p>
+          <p>・重視ポイント：受注タイムラインの可視化、営業担当ごとの進捗把握</p>
+          <p>・予算感：未確認（次回確認予定）</p>
+          <p>・意思決定者：田中部長が承認権限を持つ</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- サイドバー -->
+    <div>
+      <div class="card">
+        <div class="card-title">活動タイムライン</div>
+        <div class="timeline">
+          <div class="tl-item">
+            <div class="tl-dot"></div>
+            <div class="tl-content">
+              <div class="tl-date">2026-04-10</div>
+              <div class="tl-text">細貝様より紹介。初回電話にて概要説明</div>
+            </div>
+          </div>
+          <div class="tl-item">
+            <div class="tl-dot"></div>
+            <div class="tl-content">
+              <div class="tl-date">2026-04-17</div>
+              <div class="tl-text">30分個別面談（細貝さん同席）。課題ヒアリング完了</div>
+            </div>
+          </div>
+          <div class="tl-item">
+            <div class="tl-dot" style="background:#e65c00;"></div>
+            <div class="tl-content">
+              <div class="tl-date">2026-04-30（予定）</div>
+              <div class="tl-text">詳細商談（営業部同席）</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-title">関連情報の所在</div>
+        <div style="font-size:13px;line-height:2;">
+          <div>📎 ヒアリングシート：<span style="color:#54698d;">スプレッドシート（要集約）</span></div>
+          <div>💬 商談メモ：<span style="color:#54698d;">Slack #aiontech-deals</span></div>
+          <div>📄 提案資料：<span style="color:#54698d;">Notion / 未作成</span></div>
+        </div>
+        <div style="margin-top:8px;font-size:11px;color:#e65c00;">
+          ※ 確認事項：情報集約ルールをMTGで確認
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script src="_nav.js"></script>
+</body>
+</html>

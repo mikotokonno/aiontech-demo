@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>S-02a 商談一覧 | Salesforce デモ</title>
+<link rel="stylesheet" href="_styles.css">
+</head>
+<body>
+
+<nav class="topnav" id="topnav"></nav>
+
+<div class="page-wrap">
+  <div class="page-header">
+    <h1>商談一覧</h1>
+    <p>受注タイムラインと確度の全体管理</p>
+  </div>
+
+  <div class="btn-row">
+    <a href="#" class="btn btn-primary">＋ 新規商談</a>
+    <select style="padding:8px;border:1px solid #dddbda;border-radius:4px;font-size:13px;">
+      <option>すべての経路</option>
+      <option>紹介</option>
+      <option>アウトバウンド</option>
+    </select>
+    <select style="padding:8px;border:1px solid #dddbda;border-radius:4px;font-size:13px;">
+      <option>すべてのステージ</option>
+      <option>詳細商談</option>
+      <option>見積提示</option>
+      <option>上申・社内調整</option>
+      <option>受注</option>
+    </select>
+  </div>
+
+  <div class="card">
+    <table>
+      <thead>
+        <tr>
+          <th>会社名</th>
+          <th>経路</th>
+          <th>ステージ</th>
+          <th>想定受注日</th>
+          <th>金額（万円）</th>
+          <th>上申状況</th>
+          <th>担当</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><a href="opportunity_detail.html">株式会社イノベーション</a></td>
+          <td><span class="badge badge-referral">紹介</span></td>
+          <td>見積提示</td>
+          <td>2026-05-15</td>
+          <td>800</td>
+          <td>—</td>
+          <td>佐藤</td>
+        </tr>
+        <tr>
+          <td><a href="opportunity_detail.html">有限会社メディアクリエイト</a></td>
+          <td><span class="badge badge-outbound">アウトバウンド</span></td>
+          <td style="color:#e65c00;font-weight:600;">上申・社内調整</td>
+          <td style="color:#e65c00;">⚠️ 未定</td>
+          <td>1,200</td>
+          <td>部長承認待ち</td>
+          <td>鈴木</td>
+        </tr>
+        <tr>
+          <td><a href="opportunity_detail.html">デジタルワークス</a></td>
+          <td><span class="badge badge-referral">紹介</span></td>
+          <td><span class="badge badge-won">受注済</span></td>
+          <td>2026-04-20</td>
+          <td>600</td>
+          <td>—</td>
+          <td>田中</td>
+        </tr>
+        <tr>
+          <td><a href="opportunity_detail.html">クリエイティブソリューション</a></td>
+          <td><span class="badge badge-outbound">アウトバウンド</span></td>
+          <td>詳細商談（2回目）</td>
+          <td>2026-06-01</td>
+          <td>900</td>
+          <td>未着手</td>
+          <td>伊藤</td>
+        </tr>
+        <tr>
+          <td><a href="opportunity_detail.html">テクノコープ</a></td>
+          <td><span class="badge badge-referral">紹介</span></td>
+          <td>詳細商談</td>
+          <td>2026-05-30</td>
+          <td>500</td>
+          <td>—</td>
+          <td>山田</td>
+        </tr>
+        <tr>
+          <td><a href="opportunity_detail.html">ビジネスコネクト</a></td>
+          <td><span class="badge badge-outbound">アウトバウンド</span></td>
+          <td><span class="badge badge-lost">失注</span></td>
+          <td>—</td>
+          <td>400</td>
+          <td>—</td>
+          <td>中村</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+
+<script src="_nav.js"></script>
+</body>
+</html>

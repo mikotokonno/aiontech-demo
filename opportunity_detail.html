@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>S-02b 商談詳細 | Salesforce デモ</title>
+<link rel="stylesheet" href="_styles.css">
+</head>
+<body>
+
+<nav class="topnav" id="topnav"></nav>
+
+<div class="page-wrap">
+  <div style="margin-bottom:12px;">
+    <a href="opportunity_list.html" style="color:#0070d2;font-size:13px;text-decoration:none;">← 商談一覧に戻る</a>
+  </div>
+
+  <div class="page-header" style="display:flex;align-items:flex-start;justify-content:space-between;">
+    <div>
+      <h1>有限会社メディアクリエイト</h1>
+      <p>
+        <span class="badge badge-outbound">アウトバウンド</span>&nbsp;
+        商談詳細 | 担当：鈴木
+      </p>
+    </div>
+    <div class="btn-row" style="margin:0;">
+      <a href="#" class="btn btn-primary">ステージ更新</a>
+      <a href="#" class="btn btn-secondary">編集</a>
+    </div>
+  </div>
+
+  <!-- 経路別ステージパス切り替え表示 -->
+  <div class="card" style="margin-bottom:16px;">
+    <div class="card-title">ステージパス（アウトバウンド経路）</div>
+    <div class="stage-path">
+      <div class="stage-step done">初回商談</div>
+      <div class="stage-step done">詳細商談①</div>
+      <div class="stage-step done">詳細商談②</div>
+      <div class="stage-step active">上申・社内調整</div>
+      <div class="stage-step">見積提示</div>
+      <div class="stage-step">受注</div>
+    </div>
+    <div style="font-size:12px;color:#54698d;margin-top:8px;">
+      ※ アウトバウンド経路は上申・社内調整フェーズが入ります。紹介経由の場合はステージ数が少なくなります。
+    </div>
+  </div>
+
+  <!-- 紹介経由の場合（参考表示） -->
+  <div class="card" style="margin-bottom:16px;background:#f9fef9;border-color:#c3e6cb;">
+    <div class="card-title" style="color:#155724;">参考：紹介経由の場合のステージパス</div>
+    <div class="stage-path">
+      <div class="stage-step done">個別面談</div>
+      <div class="stage-step done">詳細商談</div>
+      <div class="stage-step">見積提示</div>
+      <div class="stage-step">受注</div>
+    </div>
+    <div style="font-size:12px;color:#155724;margin-top:8px;">
+      ※ 紹介経由はリードタイムが短く、上申フェーズなしで進むことが多いです。
+    </div>
+  </div>
+
+  <div class="detail-grid">
+    <!-- メイン情報 -->
+    <div>
+      <div class="card">
+        <div class="card-title">商談情報</div>
+        <div class="field-row">
+          <div class="field-item">
+            <div class="field-label">商談名</div>
+            <div class="field-value">有限会社メディアクリエイト - Salesforce導入</div>
+          </div>
+          <div class="field-item">
+            <div class="field-label">ステージ</div>
+            <div class="field-value" style="color:#e65c00;font-weight:600;">上申・社内調整</div>
+          </div>
+          <div class="field-item">
+            <div class="field-label">金額</div>
+            <div class="field-value">¥1,200万</div>
+          </div>
+          <div class="field-item">
+            <div class="field-label">想定受注日</div>
+            <div class="field-value" style="color:#e65c00;">⚠️ 未定（要確認）</div>
+          </div>
+          <div class="field-item">
+            <div class="field-label">獲得経路</div>
+            <div class="field-value"><span class="badge badge-outbound">アウトバウンド</span></div>
+          </div>
+          <div class="field-item">
+            <div class="field-label">上申状況</div>
+            <div class="field-value">部長承認待ち（17日経過）</div>
+          </div>
+          <div class="field-item">
+            <div class="field-label">商談回数</div>
+            <div class="field-value">3回（初回 + 詳細×2）</div>
+          </div>
+          <div class="field-item">
+            <div class="field-label">担当者</div>
+            <div class="field-value">鈴木 健二</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 見積構成（任意枠） -->
+      <div class="card">
+        <div class="card-title">見積構成（枠のみ：MTGで確認）</div>
+        <table>
+          <thead>
+            <tr>
+              <th>項目</th>
+              <th>内容</th>
+              <th>金額（万円）</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>初期構築費</td>
+              <td>Salesforce設定・カスタマイズ</td>
+              <td>600</td>
+            </tr>
+            <tr>
+              <td>月額運用費</td>
+              <td>保守・サポート</td>
+              <td>50/月</td>
+            </tr>
+            <tr>
+              <td>オプション</td>
+              <td>追加連携（Slack等）</td>
+              <td>200</td>
+            </tr>
+            <tr>
+              <td colspan="2" style="font-weight:600;">合計（初年度）</td>
+              <td style="font-weight:600;">1,200</td>
+            </tr>
+          </tbody>
+        </table>
+        <div style="margin-top:8px;font-size:11px;color:#e65c00;">
+          ※ 確認事項：見積の項目立て・オプションの考え方をMTGで議論
+        </div>
+      </div>
+    </div>
+
+    <!-- サイドバー -->
+    <div>
+      <div class="card">
+        <div class="card-title">活動タイムライン</div>
+        <div class="timeline">
+          <div class="tl-item">
+            <div class="tl-dot"></div>
+            <div class="tl-content">
+              <div class="tl-date">2026-03-01</div>
+              <div class="tl-text">初回商談。サービス概要説明・課題ヒアリング</div>
+            </div>
+          </div>
+          <div class="tl-item">
+            <div class="tl-dot"></div>
+            <div class="tl-content">
+              <div class="tl-date">2026-03-15</div>
+              <div class="tl-text">詳細商談①（営業部同席）。要件確認・デモ実施</div>
+            </div>
+          </div>
+          <div class="tl-item">
+            <div class="tl-dot"></div>
+            <div class="tl-content">
+              <div class="tl-date">2026-04-01</div>
+              <div class="tl-text">詳細商談②。社内調整のための追加資料提供</div>
+            </div>
+          </div>
+          <div class="tl-item">
+            <div class="tl-dot" style="background:#e65c00;"></div>
+            <div class="tl-content">
+              <div class="tl-date">2026-04-12 〜 現在</div>
+              <div class="tl-text" style="color:#e65c00;">上申中（部長承認待ち）⚠️ 17日経過</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-title">次アクション</div>
+        <div style="font-size:13px;line-height:2;">
+          <div><strong>期日：</strong>2026-04-30</div>
+          <div><strong>内容：</strong>上申結果の確認フォロー</div>
+          <div><strong>担当：</strong>鈴木</div>
+        </div>
+        <div style="margin-top:12px;">
+          <a href="#" class="btn btn-primary" style="width:100%;text-align:center;display:block;">次アクションを追加</a>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-title">関連情報の所在</div>
+        <div style="font-size:13px;line-height:2;">
+          <div>📎 提案資料：<span style="color:#54698d;">Notion（要Salesforce集約）</span></div>
+          <div>💬 商談メモ：<span style="color:#54698d;">Chatwork（報告あり）</span></div>
+          <div>📊 ヒアリングシート：<span style="color:#54698d;">スプレッドシート</span></div>
+        </div>
+        <div style="margin-top:8px;font-size:11px;color:#e65c00;">
+          ※ 確認事項：どの情報をSalesforceに集約するかをMTGで確認
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script src="_nav.js"></script>
+</body>
+</html>
