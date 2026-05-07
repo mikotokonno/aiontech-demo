@@ -16,7 +16,11 @@
     <p>受注見込みの全体把握・滞留検知</p>
   </div>
 
-  <!-- KPIサマリー -->
+  <!-- ① モニタリング（現状把握） -->
+  <div style="margin-bottom:6px;">
+    <span style="font-size:13px;font-weight:700;color:#0070d2;letter-spacing:.04em;">📊 モニタリング（現状把握）</span>
+  </div>
+
   <div class="kpi-row">
     <div class="kpi-card">
       <div class="kpi-label">今月の受注見込み</div>
@@ -40,15 +44,7 @@
     </div>
   </div>
 
-  <!-- 滞留アラート -->
-  <div class="alert-row">
-    <div class="alert-title">⚠️ 滞留アラート（14日以上アクションなし）</div>
-    <div class="alert-item">・ <a href="lead_detail.html">株式会社テックソリューション</a> — リード詳細確認 → 最終接触から21日経過</div>
-    <div class="alert-item">・ <a href="opportunity_detail.html">有限会社メディアクリエイト</a> — 商談：提案中 → 上申待ち17日経過</div>
-    <div class="alert-item">・ <a href="lead_detail.html">コンサルティングパートナーズ</a> — リード：開始時期未確定 → 確認要</div>
-  </div>
-
-  <div style="display:grid; grid-template-columns:1fr 1fr; gap:16px;">
+  <div style="display:grid; grid-template-columns:1fr 1fr; gap:16px; margin-bottom:24px;">
 
     <!-- 直近の重要リード -->
     <div class="card">
@@ -67,13 +63,13 @@
             <td><a href="lead_detail.html">グローバルシステムズ</a></td>
             <td><span class="badge badge-referral">紹介</span></td>
             <td><span class="badge badge-high">高</span></td>
-            <td>2026-04-30 詳細商談</td>
+            <td>2026-05-08 アポ確定</td>
           </tr>
           <tr>
             <td><a href="lead_detail.html">フューチャーテック</a></td>
             <td><span class="badge badge-outbound">アウトバウンド</span></td>
             <td><span class="badge badge-mid">中</span></td>
-            <td>2026-05-02 初回面談</td>
+            <td>2026-05-09 初回面談</td>
           </tr>
           <tr>
             <td><a href="lead_detail.html">株式会社テックソリューション</a></td>
@@ -126,6 +122,31 @@
       </div>
     </div>
 
+  </div>
+
+  <!-- ② アラート（要対応） -->
+  <div style="margin-bottom:6px;">
+    <span style="font-size:13px;font-weight:700;color:#c23934;letter-spacing:.04em;">🔔 アラート（要対応）</span>
+  </div>
+
+  <div class="alert-row" style="margin-bottom:10px;">
+    <div class="alert-title">⚠️ 滞留アラート（14日以上アクションなし）</div>
+    <div class="alert-item">・ <a href="lead_detail.html">株式会社テックソリューション</a> — リード：最終接触から21日経過</div>
+    <div class="alert-item">・ <a href="opportunity_detail.html">有限会社メディアクリエイト</a> — 商談：上申待ち17日経過</div>
+    <div class="alert-item">・ <a href="lead_detail.html">コンサルティングパートナーズ</a> — リード：開始時期未確定・確認要</div>
+  </div>
+
+  <div style="display:grid; grid-template-columns:1fr 1fr; gap:16px;">
+    <div class="alert-row" style="background:#fff8f0;border-left:4px solid #e65c00;">
+      <div class="alert-title" style="color:#e65c00;">📄 受注済み・契約書未作成</div>
+      <div class="alert-item">・ <a href="opportunity_detail.html">デジタルワークス</a> — 受注確定済み・クラウドサイン送付待ち</div>
+      <div style="font-size:11px;color:#888;margin-top:6px;">※ 契約書送付はクラウドサインで自動送信予定（確認事項Q4）</div>
+    </div>
+    <div class="alert-row" style="background:#f0f4ff;border-left:4px solid #0070d2;">
+      <div class="alert-title" style="color:#0070d2;">🔄 アポ獲得済み・商談未転換</div>
+      <div class="alert-item">・ <a href="lead_detail.html">ネクストビジョン</a> — アポ獲得から5日経過・商談転換待ち</div>
+      <div style="font-size:11px;color:#888;margin-top:6px;">※ アポ獲得後は速やかに商談レコードに転換してください</div>
+    </div>
   </div>
 </div>
 
